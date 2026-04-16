@@ -6,8 +6,8 @@ from
 job_postings_fact as jpf
 LEFT JOIN   company_dim as cd   
 ON jpf.company_id = cd.company_id
-where jpf.job_country = 'United States'
+WHERE jpf.job_country = 'United States'
 group by cd.name
 HAVING COUNT(jpf.job_id) > 3000
 order by postings_count DESC
-limit 10;
+limit 20;
