@@ -1,4 +1,4 @@
-EXPLAIN ANALYZE --this command execute and analyze the execution while explain alone does not execute
+EXPLAIN ANALYZE --this command executes and analyzes the execution while explain alone does not execute
 select 
 cd.name as Company_name,
 count(jpf.job_id) as postings_count
