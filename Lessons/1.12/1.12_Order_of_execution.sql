@@ -1,6 +1,6 @@
 EXPLAIN ANALYZE
 select 
-cd.name as company_name,
+cd.name as Company_name,
 count(jpf.job_id) as postings_count
 from
 job_postings_fact as jpf
