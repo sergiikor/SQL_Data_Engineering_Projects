@@ -1,4 +1,4 @@
-
+--checkkkkkkkkk
 -- .read Lessons/1.21/1.21_DDL_DML_Pt1.sql
 use data_jobs;
 Drop database if exists jobs_mart;
