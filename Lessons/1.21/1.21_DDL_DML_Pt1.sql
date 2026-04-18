@@ -56,4 +56,38 @@ values
 select *
 from staging.preferred_roles;
 
+ALTER TABLE staging.preferred_roles
+ADD COLUMN preferred_role BOOLEAN;
 
+ALTER TABLE staging.preferred_roles
+DROP  COLUMN preferred_role;
+
+ALTER TABLE staging.preferred_roles
+ADD COLUMN preferred_role BOOLEAN;
+
+UPDATE staging.preferred_roles
+SET preferred_role = true
+WHERE role_id IN (1, 2);
+
+UPDATE staging.preferred_roles
+SET preferred_role = FALSE
+WHERE role_id = 3;
+
+ALTER TABLE staging.preferred_roles
+RENAME TO priority_roles;
+
+select *
+from staging.priority_roles;
+
+ALTER TABLE staging.priority_roles
+RENAME column preferred_role TO prioriry_lvl;
+
+alter table staging.priority_roles
+alter column prioriry_lvl TYPE integer;
+
+update staging.priority_roles
+set prioriry_lvl = 3
+where role_id = 3;
+
+select *
+from staging.priority_roles;
